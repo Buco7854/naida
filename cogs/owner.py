@@ -24,7 +24,7 @@ class Owner(commands.Cog):
             return await ctx.send(f'Unknown subcommand `{subcommand}`', delete_after=5)
 
     @dev.command(name='restart', aliases=['reboot', 'r'], message_command=True)
-    async def dev_restart(self, ctx, *, service: str = 'ayane'):
+    async def dev_restart(self, ctx):
         await ctx.send("Restarting the bot...")
         await ctx.bot.close()
 
