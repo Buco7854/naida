@@ -45,6 +45,9 @@ class MyBot(commands.Bot):
 
     async def close(self):
         await self.session.close()
+
+        logging.info("Closing the bot...")
+        
         await super().close()
 
     async def on_ready(self):
