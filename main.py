@@ -44,7 +44,7 @@ class MyBot(commands.Bot):
         self.colour = self.color = discord.Colour(value=0xA37FFF)
 
     async def close(self):
-        self.session.close()
+        await self.session.close()
         await super().close()
 
     async def on_ready(self):
